@@ -1,0 +1,4 @@
+#Pasta
+bin/**/*
+#Arquivo
+*.classpath
