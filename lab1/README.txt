@@ -1,1 +1,1 @@
-oi oi oi oi 
+Este repositório é para o primeiro laboratório de SI1, visando a prática de conceitos em TDD e utilização de ferramentas de controle de versão.
