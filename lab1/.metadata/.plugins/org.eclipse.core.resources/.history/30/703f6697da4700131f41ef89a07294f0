@@ -34,7 +34,7 @@ public class TextNumberText {
 		
 		String[] unidades = {"um", "dois", "tres", "quatro", "cinco", "seis", "sete", "oito", "nove"};
 	//	String[] dezenas = {"dez", "vinte", "trinta", "quarenta", "cinquenta", "sessenta", "setenta", "oitenta", "noventa"};
-		String vinte = "vinte e ";
+		String vinte = "vinte e";
 		
 		for (int i = 0; i < unidades.length; i++) {
 			

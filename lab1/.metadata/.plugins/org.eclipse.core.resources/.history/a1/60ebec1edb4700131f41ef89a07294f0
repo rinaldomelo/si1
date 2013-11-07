@@ -19,10 +19,6 @@ public class NumberText {
 		TABELA.put("60", "sessenta"); TABELA.put("70", "setenta"); TABELA.put("80", "oitenta");
 		TABELA.put("90", "noventa"); 
 		
-		if (TABELA.get(number)==null) {
-			return TABELA.get(number.charAt(0)+"0") + " e " + TABELA.get(number.charAt(1)+"");
-		}
-		
 		return TABELA.get(number);
 	}
 
