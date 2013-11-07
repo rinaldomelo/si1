@@ -1,0 +1,15 @@
+import java.util.HashMap;
+
+
+public class NumberText {
+	
+	public static String getNumberText(String number) {
+		
+		HashMap<String, String> TABELA = new HashMap<>();
+	
+		
+		return TABELA.get(number);
+	}
+
+}
+	

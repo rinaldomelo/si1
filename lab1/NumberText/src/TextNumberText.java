@@ -5,12 +5,16 @@ import org.junit.Test;
 public class TextNumberText {
 	
 	@Test
-	public void testa0_9(){
+	public void testa0A20() {
 		
-		String[] unidades = {"zero", "um", "dois", "tres", "quatro", "cinco", "seis", "sete", "oito", "nove"};
-	
-		for(int i = 0; i > unidades.length; i++) {
-			assertEquals(unidades[i], NumberText.getNumberText(i+""));
+		String[] numbersTextZeroToTwenty = {"zero", "um", "dois", "tres", "quatro", "cinco",
+										"seis", "sete", "oito", "nove", "dez", "onze", "doze", 
+										"treze", "quatorze", "quinze", "desseseis", "dezessete",
+										"dezoito", "dezenove","vinte"};
+		
+		for (int i = 0; i < numbersTextZeroToTwenty.length; i++) {
+			
+			assertEquals(numbersTextZeroToTwenty[i], NumberText.getNumberText(i+""));
 		}
 	}	
 }

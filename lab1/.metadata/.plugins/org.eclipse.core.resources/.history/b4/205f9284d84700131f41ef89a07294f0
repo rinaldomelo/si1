@@ -1,0 +1,23 @@
+import java.util.HashMap;
+
+
+public class NumberText {
+	
+	public static String getNumberText(String number) {
+		
+		HashMap<String, String> TABELA = new HashMap<>();
+	
+		
+		TABELA_UNIDADES.put("0", "zero"); TABELA_UNIDADES.put("1", "um"); TABELA_UNIDADES.put("2", "dois");
+		TABELA_UNIDADES.put("3", "tres"); TABELA_UNIDADES.put("4", "quatro"); TABELA_UNIDADES.put("5", "cinco");
+		TABELA_UNIDADES.put("6", "seis"); TABELA_UNIDADES.put("7", "sete"); TABELA_UNIDADES.put("8", "oito");
+		TABELA_UNIDADES.put("9", "nove"); TABELA_UNIDADES.put("11", "onze"); TABELA_UNIDADES.put("12", "doze"); 
+		TABELA_UNIDADES.put("13", "treze"); TABELA_UNIDADES.put("14", "quatorze"); TABELA_UNIDADES.put("10", "dez");
+		TABELA_UNIDADES.put("15", "quinze"); TABELA_UNIDADES.put("16", "desseseis"); TABELA_UNIDADES.put("17", "dezessete"); 
+		TABELA_UNIDADES.put("18", "dezoito"); TABELA_UNIDADES.put("19", "dezenove");
+		
+		return TABELA.get(number);
+	}
+
+}
+	
