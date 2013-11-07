@@ -30,7 +30,7 @@ public class TextNumberText {
 	}
 	
 	@Test
-	public void testa21A99() {
+	public void testa21A29() {
 		
 		String[] unidades = {"um", "dois", "tres", "quatro", "cinco", "seis", "sete", "oito", "nove"};
 		String[] dezenas = {"vinte", "trinta", "quarenta", "cinquenta", "sessenta", "setenta", "oitenta", "noventa"};

@@ -30,16 +30,16 @@ public class TextNumberText {
 	}
 	
 	@Test
-	public void testa21A99() {
+	public void testa21A29() {
 		
 		String[] unidades = {"um", "dois", "tres", "quatro", "cinco", "seis", "sete", "oito", "nove"};
-		String[] dezenas = {"vinte", "trinta", "quarenta", "cinquenta", "sessenta", "setenta", "oitenta", "noventa"};
+		String[] dezenas = {"dez", "vinte", "trinta", "quarenta", "cinquenta", "sessenta", "setenta", "oitenta", "noventa"};
 		
 		for (int i = 0; i < dezenas.length; i++) {
 			
 			for (int j = 0; j < unidades.length; j++) {
 
-				assertEquals(dezenas[i]+" e "+unidades[j], NumberText.getNumberText(((i+2)*10)+(j+1)+""));
+				assertEquals(dezenas[i], NumberText.getNumberText((21+i)+""));
 			}
 		}
 	}
