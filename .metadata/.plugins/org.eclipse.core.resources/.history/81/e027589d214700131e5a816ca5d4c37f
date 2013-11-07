@@ -1,0 +1,16 @@
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+
+public class TextNumberText {
+	
+	@Test
+	public void testa01(){
+		
+		assertEquals("zero", NumberText.getNumberText("0"));
+		assertEquals("um", NumberText.getNumberText("1"));
+		assertEquals("dois", NumberText.getNumberText("2"));
+
+	}
+}

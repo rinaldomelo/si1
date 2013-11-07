@@ -1,0 +1,12 @@
+import org.junit.Test;
+
+
+public class TextNumberText {
+	
+	@Test
+	public void testa0(){
+		
+	}
+	
+
+}
