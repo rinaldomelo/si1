@@ -47,11 +47,11 @@ public class TextNumberText {
 	@Test
 	public void testaCentenas() {
 
-		String[] dezenas = {"cem", "duzentos", "trezentos", "quatrocentos", "quinhentos", "seiscentos", "setecentos", "oitocentos", "novecentos"};
+		String[] dezenas = {"dez", "vinte", "trinta", "quarenta", "cinquenta", "sessenta", "setenta", "oitenta", "noventa"};
 		
 		for (int i = 0; i < dezenas.length; i++) {
 			
-			assertEquals(dezenas[i], NumberText.getNumberText(((i+1)*100)+""));
+			assertEquals(dezenas[i], NumberText.getNumberText(((i+1)*10)+""));
 		}
 	}
 }
