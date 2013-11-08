@@ -94,11 +94,4 @@ public class TextNumberText {
 		assertEquals("cento e vinte", NumberText.getNumberText("120"));
 
 	}
-	
-	@Test
-	public void testa1000() {
-
-		assertEquals("mil", NumberText.getNumberText("1000"));
-	}
-
 }

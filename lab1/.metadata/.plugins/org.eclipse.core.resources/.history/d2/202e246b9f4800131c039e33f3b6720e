@@ -5,6 +5,7 @@ public class NumberText {
 	
 	static HashMap<String, String> TABELA = new HashMap<>();
 	
+	
 	public static String getNumberText(String number) {
 		
 		TABELA.put("0", "zero"); TABELA.put("1", "um"); TABELA.put("2", "dois");
@@ -18,7 +19,7 @@ public class NumberText {
 		TABELA.put("60", "sessenta"); TABELA.put("70", "setenta"); TABELA.put("80", "oitenta");
 		TABELA.put("90", "noventa"); 		TABELA.put("100", "cento"); TABELA.put("200", "duzentos"); TABELA.put("300", "trezentos");
 		TABELA.put("400", "quatrocentos"); TABELA.put("500", "quinhentos"); TABELA.put("600", "seiscentos"); 
-		TABELA.put("700", "setecentos"); TABELA.put("800", "oitocentos"); TABELA.put("900", "novecentos"); TABELA.put("1000", "mil"); 
+		TABELA.put("700", "setecentos"); TABELA.put("800", "oitocentos"); TABELA.put("900", "novecentos"); 
 
 		return decomposeNumber(number);
 	}
