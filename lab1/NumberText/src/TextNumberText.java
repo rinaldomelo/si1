@@ -12,7 +12,7 @@ public class TextNumberText {
 
 		String[] numbersTextZeroToTwenty = {"zero", "um", "dois", "tres", "quatro", "cinco",
 				"seis", "sete", "oito", "nove", "dez", "onze", "doze", 
-				"treze", "quatorze", "quinze", "desseseis", "dezessete",
+				"treze", "quatorze", "quinze", "dezesseis", "dezessete",
 				"dezoito", "dezenove","vinte"};
 
 		for (int i = 0; i < numbersTextZeroToTwenty.length; i++) {
@@ -59,8 +59,40 @@ public class TextNumberText {
 
 	@Test
 	public void testa101A110() {
+		String[] dezenas = {"vinte", "trinta", "quarenta", "cinquenta", "sessenta", "setenta", "oitenta", "noventa"};
+
+		String[] centenas = {"cento", "duzentos", "trezentos", "quatrocentos", "quinhentos", "seiscentos", "setecentos", "oitocentos", "novecentos"};
 
 		
+		for (int i = 0; i < centenas.length; i++) {
+			for (int j = 0; j < dezenas.length; j++) {
+				for (int k = 0; k < centenas.length; k++) {
+					assertEquals(centenas[i]+" e "+dezenas[j]+" e "+unidades[k], NumberText.getNumberText("" + (i+1)+ (j+2) + (k+1)));
+				}
+			}
+		}
+		
 		assertEquals("cento e um", NumberText.getNumberText("101"));
+		assertEquals("cento e dois", NumberText.getNumberText("102"));
+		assertEquals("cento e tres", NumberText.getNumberText("103"));
+		assertEquals("cento e quatro", NumberText.getNumberText("104"));
+		assertEquals("cento e cinco", NumberText.getNumberText("105"));
+		assertEquals("cento e seis", NumberText.getNumberText("106"));
+		assertEquals("cento e sete", NumberText.getNumberText("107"));
+		assertEquals("cento e oito", NumberText.getNumberText("108"));
+		assertEquals("cento e nove", NumberText.getNumberText("109"));
+		assertEquals("cento e dez", NumberText.getNumberText("110"));
+		assertEquals("cento e onze", NumberText.getNumberText("111"));
+		assertEquals("cento e doze", NumberText.getNumberText("112"));
+		assertEquals("cento e treze", NumberText.getNumberText("113"));
+		assertEquals("cento e quatorze", NumberText.getNumberText("114"));
+		assertEquals("cento e quinze", NumberText.getNumberText("115"));
+		assertEquals("cento e dezesseis", NumberText.getNumberText("116"));
+		assertEquals("cento e dezessete", NumberText.getNumberText("117"));
+		assertEquals("cento e dezoito", NumberText.getNumberText("118"));
+		assertEquals("cento e dezenove", NumberText.getNumberText("119"));
+		assertEquals("cento e vinte", NumberText.getNumberText("120"));
+
+	
 	}
 }
