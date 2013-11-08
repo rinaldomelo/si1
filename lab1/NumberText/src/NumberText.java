@@ -3,10 +3,10 @@ import java.util.HashMap;
 
 public class NumberText {
 	
-	public static String getNumberText(String number) {
-		
-		HashMap<String, String> TABELA = new HashMap<>();
+	static HashMap<String, String> TABELA = new HashMap<>();
 	
+	
+	public static String getNumberText(String number) {
 		
 		TABELA.put("0", "zero"); TABELA.put("1", "um"); TABELA.put("2", "dois");
 		TABELA.put("3", "tres"); TABELA.put("4", "quatro"); TABELA.put("5", "cinco");
@@ -17,17 +17,73 @@ public class NumberText {
 		TABELA.put("18", "dezoito"); TABELA.put("19", "dezenove"); TABELA.put("20", "vinte"); 
 		TABELA.put("30", "trinta"); TABELA.put("40", "quarenta"); TABELA.put("50", "cinquenta");
 		TABELA.put("60", "sessenta"); TABELA.put("70", "setenta"); TABELA.put("80", "oitenta");
-		TABELA.put("90", "noventa"); 		TABELA.put("100", "cem"); TABELA.put("200", "duzentos"); TABELA.put("300", "trezentos");
+		TABELA.put("90", "noventa"); 		TABELA.put("100", "cento"); TABELA.put("200", "duzentos"); TABELA.put("300", "trezentos");
 		TABELA.put("400", "quatrocentos"); TABELA.put("500", "quinhentos"); TABELA.put("600", "seiscentos"); 
 		TABELA.put("700", "setecentos"); TABELA.put("800", "oitocentos"); TABELA.put("900", "novecentos"); 
 
+		return decomposeNumber(number);
+	}
+	
+	private static String decomposeNumber(String number) {
 		
-		if (TABELA.get(number)==null) {
-			return TABELA.get(number.charAt(0)+"0") + " e " + TABELA.get(number.charAt(1)+"");
+		String result = ""; 
+		
+		if (TABELA.get(number) == null) {
+	
+			if (number.length() == 2) {
+				
+				if ((clearZeros(number).length() < 2)) {
+
+					result += TABELA.get(clearZeros(number));
+				} else {
+		
+					result += TABELA.get(replaceZeros(number)) + " e " + TABELA.get(number.substring(1));
+				}
+
+			} else if (number.length() == 3) {
+
+			result += TABELA.get(replaceZeros(number)) + " e " + decomposeNumber(number.substring(1));
+			}
+			
+			return result;
+		} 
+		
+		if (number.equals("100")) {
+			
+			result = "cem";
+		} else {
+			
+			result = TABELA.get(number);
 		}
 		
-		return TABELA.get(number);
+		return result;
+		
 	}
-
-}
 	
+	private static String clearZeros(String number) {
+		
+		if (number.length() > 0) {
+		
+			if ((number.charAt(0)+"").equals("0")) {
+				
+				return clearZeros(number.substring(1));
+			}
+		}
+		
+		return number;
+	}
+	
+	private static String replaceZeros(String number) {
+		
+		if (number.length() == 0) return "";
+		
+		String result = number.charAt(0)+"";
+		
+		for (int i = 0; i < number.length()-1; i++) {
+			result += "0";
+		}
+		
+		return result;
+		
+	}
+}	

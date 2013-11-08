@@ -1,0 +1,87 @@
+import java.util.HashMap;
+
+
+public class NumberText {
+	
+	static HashMap<String, String> TABELA = new HashMap<>();
+	
+	
+	public static String getNumberText(String number) {
+		
+		TABELA.put("0", "zero"); TABELA.put("1", "um"); TABELA.put("2", "dois");
+		TABELA.put("3", "tres"); TABELA.put("4", "quatro"); TABELA.put("5", "cinco");
+		TABELA.put("6", "seis"); TABELA.put("7", "sete"); TABELA.put("8", "oito");
+		TABELA.put("9", "nove"); TABELA.put("11", "onze"); TABELA.put("12", "doze"); 
+		TABELA.put("13", "treze"); TABELA.put("14", "quatorze"); TABELA.put("10", "dez");
+		TABELA.put("15", "quinze"); TABELA.put("16", "desseseis"); TABELA.put("17", "dezessete"); 
+		TABELA.put("18", "dezoito"); TABELA.put("19", "dezenove"); TABELA.put("20", "vinte"); 
+		TABELA.put("30", "trinta"); TABELA.put("40", "quarenta"); TABELA.put("50", "cinquenta");
+		TABELA.put("60", "sessenta"); TABELA.put("70", "setenta"); TABELA.put("80", "oitenta");
+		TABELA.put("90", "noventa"); 		TABELA.put("100", "cento"); TABELA.put("200", "duzentos"); TABELA.put("300", "trezentos");
+		TABELA.put("400", "quatrocentos"); TABELA.put("500", "quinhentos"); TABELA.put("600", "seiscentos"); 
+		TABELA.put("700", "setecentos"); TABELA.put("800", "oitocentos"); TABELA.put("900", "novecentos"); 
+
+		return decomposeNumber(number);
+	}
+	
+	private static String decomposeNumber(String number) {
+		
+		String result = ""; 
+		
+		if (TABELA.get(number) == null) {
+	
+			if (number.length() == 2) {
+				
+				if ((clearZeros(number).length() < 2)) {
+
+					result += TABELA.get(clearZeros(number));
+				} else {
+					result += TABELA.get(replaceZeros(number)) + " e " + TABELA.get(number.substring(1));
+					
+				}
+
+			} else if (number.length() == 3) {
+
+			result += TABELA.get(replaceZeros(number)) + " e " + decomposeNumber(number.substring(1));
+			}
+		} 
+		
+		if (number.equals("100")) {
+			
+			result = "cem";
+		} else {
+			
+			result = TABELA.get(number);
+		}
+		
+		return result;
+		
+	}
+	
+	private static String clearZeros(String number) {
+		
+		if (number.length() > 0) {
+		
+			if ((number.charAt(0)+"").equals("0")) {
+				
+				return clearZeros(number.substring(1));
+			}
+		}
+		
+		return number;
+	}
+	
+	private static String replaceZeros(String number) {
+		
+		if (number.length() == 0) return "";
+		
+		String result = number.charAt(0)+"";
+		
+		for (int i = 0; i < number.length()-1; i++) {
+			result += "0";
+		}
+		
+		return result;
+		
+	}
+}	

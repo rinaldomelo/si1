@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;init&apos; in &apos;NumberText.replaceZeros(...)&apos; to &apos;result&apos;&#x0D;&#x0A;- Original project: &apos;NumberText&apos;&#x0D;&#x0A;- Original element: &apos;NumberText.replaceZeros(String).init&apos;&#x0D;&#x0A;- Renamed element: &apos;init&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;init&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;{NumberText.java[NumberText~replaceZeros~QString;@init!2264!2297!2271!2274!QString;!0!false" name="result" references="true" stamp="1383929462257" version="1.0"/>
+</session>
