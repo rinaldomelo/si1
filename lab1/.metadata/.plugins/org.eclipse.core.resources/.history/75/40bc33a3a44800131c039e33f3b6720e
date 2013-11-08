@@ -37,6 +37,17 @@ public class NumberText {
 					result += TABELA.get(replaceZeros(number)) + " e " + decomposeNumber(number.substring(1));
 				}
 				
+				if ((clearZeros(number).length() > 3)) {
+					
+					if (number.equals("1000")) {
+						
+					}
+					
+					result += TABELA.get("1000") + " e " + decomposeNumber(number.substring(1));
+					
+					
+				}
+				
 				return result;
 		} 
 		

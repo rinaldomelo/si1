@@ -41,7 +41,7 @@ public class TextNumberText {
 
 			for (int j = 0; j < unidades.length; j++) {
 
-				assertEquals(dezenas[i]+" e "+ unidades[j], NumberText.getNumberText(((i+2)*10)+(j+1)+""));
+				assertEquals(dezenas[i]+" e "+unidades[j], NumberText.getNumberText(((i+2)*10)+(j+1)+""));
 			}
 		}
 	}
@@ -99,9 +99,6 @@ public class TextNumberText {
 	public void testa1000() {
 
 		assertEquals("mil", NumberText.getNumberText("1000"));
-		assertEquals("mil e um", NumberText.getNumberText("1001"));
-		assertEquals("mil e vinte e um", NumberText.getNumberText("1021"));
-
 	}
 
 }

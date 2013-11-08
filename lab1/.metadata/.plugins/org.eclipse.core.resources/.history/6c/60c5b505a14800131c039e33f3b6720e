@@ -35,14 +35,15 @@ public class NumberText {
 				} else {
 		
 					result += TABELA.get(replaceZeros(number)) + " e " + decomposeNumber(number.substring(1));
-				}
-				
-				return result;
+			} 			
+			return result;
 		} 
 		
 		if (number.equals("100")) {
+			
 			result = "cem";
 		} else {
+			
 			result = TABELA.get(number);
 		}
 		
@@ -56,8 +57,7 @@ public class NumberText {
 			if ((number.charAt(0)+"").equals("0")) {
 				
 				return clearZeros(number.substring(1));
-			} 
-				return number;
+			}
 		}
 		
 		return number;

@@ -35,9 +35,8 @@ public class NumberText {
 				} else {
 		
 					result += TABELA.get(replaceZeros(number)) + " e " + decomposeNumber(number.substring(1));
-				}
-				
-				return result;
+			} 			
+			return result;
 		} 
 		
 		if (number.equals("100")) {
@@ -50,14 +49,13 @@ public class NumberText {
 	}
 	
 	private static String clearZeros(String number) {
-		
+		String result = "";
 		if (number.length() > 0) {
 		
 			if ((number.charAt(0)+"").equals("0")) {
 				
-				return clearZeros(number.substring(1));
-			} 
-				return number;
+				result = clearZeros(number.substring(1));
+			}
 		}
 		
 		return number;
