@@ -28,13 +28,17 @@ public class NumberText {
 		String result = ""; 
 		
 		if (TABELA.get(number) == null) {
-		
+	
+			if (number.length() == 2) {
+				
 				if ((clearZeros(number).length() < 2)) {
 
 					result += TABELA.get(clearZeros(number));
 				} else {
 		
 					result += TABELA.get(replaceZeros(number)) + " e " + decomposeNumber(number.substring(1));
+				}
+
 			} 			
 			return result;
 		} 

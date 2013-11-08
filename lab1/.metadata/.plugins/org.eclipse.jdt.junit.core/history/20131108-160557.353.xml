@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TextNumberText" project="NumberText" tests="6" started="6" failures="0" errors="0" ignored="0">
+  <testsuite name="TextNumberText" time="0.026">
+    <testcase name="testaCentenas" classname="TextNumberText" time="0.001"/>
+    <testcase name="testa0A20" classname="TextNumberText" time="0.0"/>
+    <testcase name="testa1000" classname="TextNumberText" time="0.0"/>
+    <testcase name="testa101A110" classname="TextNumberText" time="0.023"/>
+    <testcase name="testaDezenas" classname="TextNumberText" time="0.0"/>
+    <testcase name="testa21A99" classname="TextNumberText" time="0.002"/>
+  </testsuite>
+</testrun>
