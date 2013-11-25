@@ -2,7 +2,6 @@
 GET     /                       controllers.Application.index()
                                 
 # Tasks          
-
 GET     /tasks                  controllers.Application.tasks()
 GET     /assets/﻿*file           controllers.Assets.at(path="/public", file)
 POST    /tasks                  controllers.Application.newTask()
